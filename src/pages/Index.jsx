@@ -7,9 +7,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const initialTransactions = [
-  { id: 1, date: '2024-03-01', amount: 150, type: 'expense', category: 'Nike' },
-  { id: 2, date: '2024-03-05', amount: 200, type: 'income', category: 'Adidas' },
-  { id: 3, date: '2024-03-10', amount: 180, type: 'expense', category: 'Jordan' },
+  { id: 1, date: '2024-03-01', amount: 500, type: 'income', category: 'Donations' },
+  { id: 2, date: '2024-03-05', amount: 200, type: 'expense', category: 'Equipment' },
+  { id: 3, date: '2024-03-10', amount: 150, type: 'expense', category: 'Maintenance' },
 ];
 
 const Index = () => {
@@ -40,7 +40,7 @@ const Index = () => {
     <div className="min-h-screen p-8 bg-gray-100">
       <Card className="mb-8">
         <CardHeader>
-          <CardTitle>Sneaker Side-Hustle Accounting</CardTitle>
+          <CardTitle>Village Playground Accounting</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -60,9 +60,11 @@ const Index = () => {
                 <SelectValue placeholder="Category" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Nike">Nike</SelectItem>
-                <SelectItem value="Adidas">Adidas</SelectItem>
-                <SelectItem value="Jordan">Jordan</SelectItem>
+                <SelectItem value="Donations">Donations</SelectItem>
+                <SelectItem value="Equipment">Equipment</SelectItem>
+                <SelectItem value="Maintenance">Maintenance</SelectItem>
+                <SelectItem value="Events">Events</SelectItem>
+                <SelectItem value="Utilities">Utilities</SelectItem>
                 <SelectItem value="Other">Other</SelectItem>
               </SelectContent>
             </Select>
